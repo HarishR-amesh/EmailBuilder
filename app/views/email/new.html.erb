@@ -1,0 +1,21 @@
+<%= form_for( @email, url: email_index_url, method: 'POST' ) do |f| %>
+  <div>
+    <%= f.label :from %>
+    <%= f.text_field :from %>
+  </div>
+  <div>
+    <%= f.label :to %>
+    <%= f.text_field :to %>
+  </div>
+  <div>
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+  </div>
+  <div>
+    <%= f.label :mail_content %>
+    <%= f.text_area :mail_content %>
+  </div>
+  <div>
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>
