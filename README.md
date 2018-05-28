@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 2.5.1
 
 * System dependencies
 
@@ -21,4 +21,12 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Environment variables are:
+  USERNAME <gmail email>
+  PASSWORD  <gmail password>
+  MAILER_DOMAIN <app domain>
+  MAILER_HOST <domain host ( for development => localhost:3000)>
+
+* To start rails server 
+  rails s -p <port number ( for development => 3000) >
+  
