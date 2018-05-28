@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- resources :email, only: [:new, :create ]
+  resources :email, only: %i[new create]
 
   root to: 'email#new'
 

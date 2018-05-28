@@ -1,16 +1,17 @@
 class EmailController < ApplicationController
-  def new;
+  def new
     @email = Email.new
   end
 
   def create
     @email = Email.new(email_params)
     if @email.save
-      flash[:notice] = 'Email saved successfully!!!'
+      EmailMailer.send_email(@email).deliver_now
+      flash[:notice] = 'Email Sent Successfully!!!'
     else
       flash[:notice] = 'Oops Something went wrong!!!'
     end
-    redirect_back fallback_location: {action: 'new'}
+    redirect_back fallback_location: { action: 'new' }
   end
 
   private
